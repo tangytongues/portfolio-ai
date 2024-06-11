@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Victor Khang - Personal Webpage</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            font-family: Arial, sans-serif;
+            background: #f0f0f0;
+            color: #333;
+            perspective: 1000px;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            text-align: center;
+            transform-style: preserve-3d;
+            transition: transform 1s;
+        }
+
+        header {
+            padding: 20px 0;
+            background: #333;
+            color: #fff;
+        }
+
+        section {
+            padding: 50px 0;
+            margin: 20px 0;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transform: rotateY(0deg);
+        }
+
+        h1, h2, p {
+            margin: 0 0 20px 0;
+        }
+
+        .links a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #0077b5;
+        }
+
+        .project-link {
+            display: block;
+            margin: 10px 0;
+            color: #0077b5;
+            text-decoration: none;
+        }
+
+        footer {
+            padding: 10px 0;
+            background: #333;
+            color: #fff;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                transform: rotateY(0);
+            }
+        }
+    </style>
+    <script>
+        document.addEventListener('mousemove', (event) => {
+            const container = document.querySelector('.container');
+            const x = (window.innerWidth / 2 - event.pageX) / 20;
+            const y = (window.innerHeight / 2 - event.pageY) / 20;
+            container.style.transform = `rotateY(${x}deg) rotateX(${y}deg)`;
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Victor Khang</h1>
+    </header>
+    <div class="container">
+        <section>
+            <h2>About Me</h2>
+            <p>Hi, I am Victor Khang. I am 20 years old, currently pursuing BTech in Computer Science (3rd year) from Guwahati, Assam. I am multilingual and I love creating fun projects. I also create 3D websites for fun.</p>
+        </section>
+        <section>
+            <h2>Projects</h2>
+            <p><a class="project-link" href="your-e-store-link-here">My E-Store</a></p>
+            <p><a class="project-link" href="your-instagram-page-link-here">Instagram</a></p>
+        </section>
+        <section>
+            <h2>Contact</h2>
+            <div class="links">
+                <a href="https://www.linkedin.com/in/victorkhang" target="_blank">LinkedIn</a>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2024 Victor Khang. All rights reserved.</p>
+    </footer>
+</body>
+</html>
